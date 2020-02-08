@@ -1,5 +1,5 @@
 /* eslint-disable class-methods-use-this */
-import WorkTasks from './WorkTasks.js';
+import Notepad from "./Notepad.js";
 
-const workTasks = new WorkTasks();
-workTasks.init();
+const notepad = new Notepad();
+notepad.init();

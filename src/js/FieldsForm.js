@@ -1,10 +1,10 @@
-export default class DisplayForm {
+export default class FieldsForm {
   constructor() {
     this.divPined = document.getElementById('pined');
     this.divAllTasks = document.getElementById('all-tasks');
   }
 
-  redrawTasks(arrTasks) {
+  updateTasks(arrTasks) {
     this.divPined.innerHTML = '';
     this.divAllTasks.innerHTML = '';
 
