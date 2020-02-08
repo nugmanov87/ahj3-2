@@ -1,5 +1,4 @@
-/* eslint-disable class-methods-use-this */
-import Notepad from "./Notepad.js";
+import Notepad from './Notepad';
 
 const notepad = new Notepad();
 notepad.init();

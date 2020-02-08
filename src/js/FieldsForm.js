@@ -1,23 +1,22 @@
 export default class FieldsForm {
   constructor() {
-    this.divPined = document.getElementById('pined');
-    this.divAllTasks = document.getElementById('all-tasks');
+    this.pined = document.getElementById('pined');
+    this.allTasks = document.getElementById('all-tasks');
   }
 
   updateTasks(arrTasks) {
-    this.divPined.innerHTML = '';
-    this.divAllTasks.innerHTML = '';
+    this.pined.innerHTML = '';
+    this.allTasks.innerHTML = '';
 
     const havePined = arrTasks.some((item) => item.pined);
-
     const haveTask = arrTasks.every((item) => item.pined);
 
     if (!havePined) {
-      this.divPined.innerHTML = '<p>No pinned tasks</p>';
+      this.pined.innerHTML = '<p>No pinned tasks</p>';
     }
 
     if (haveTask) {
-      this.divAllTasks.innerHTML = '<p>No tasks found</p>';
+      this.allTasks.innerHTML = '<p>No tasks found</p>';
     }
 
     for (const item of arrTasks) {
@@ -30,9 +29,9 @@ export default class FieldsForm {
       `;
 
       if (item.pined) {
-        this.divPined.appendChild(itemTask);
+        this.pined.appendChild(itemTask);
       } else {
-        this.divAllTasks.appendChild(itemTask);
+        this.allTasks.appendChild(itemTask);
       }
     }
   }

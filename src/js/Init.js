@@ -1,4 +1,4 @@
-import Task from "./Task.js";
+import Task from './Task';
 
 export class ArrData {
   constructor() {
@@ -11,10 +11,10 @@ export class ArrData {
 }
 
 export function initNotepad(arrData) {
-  arrData.addTask("Task 1");
-  arrData.addTask("Task 2");
-  arrData.addTask("Task 3");
-  arrData.addTask("Task 4");
+  arrData.addTask('Task 1');
+  arrData.addTask('Task 2');
+  arrData.addTask('Task 3');
+  arrData.addTask('Task 4');
 
   const [...rest] = arrData.tasks;
   rest[3].pined = true;
